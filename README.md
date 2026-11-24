@@ -8,6 +8,7 @@
 One integer state transition, derived end to end, from the first fixed-point operation to the last byte of the answer.
 
 [![Paper](https://img.shields.io/badge/paper-PDF%20·%20152%20pages-b31b1b)](paper/HVP_Mind.pdf)
+[![Book](https://img.shields.io/badge/book-GUHCT%20Full%20Edition%206%20·%20848%20pages-6f42c1)](book/GUHCT_Full_Edition_6.pdf)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
 [![Commercial](https://img.shields.io/badge/commercial%20use-by%20permission-orange)](#license-and-commercial-use)
 [![Source](https://img.shields.io/badge/source-GUHCT%20%2F%20Marvosa-black)](https://github.com/Ajordon30005/marvosa)
@@ -95,6 +96,14 @@ We welcome scrutiny. If a number in the ledger does not reproduce, open an issue
 ## Background
 
 The HVP Mind is a computational form of Anthony Jordon's **GUHCT** framework. A harmonic field's configurations differ through phase, excitation and organization. **HCL** supplies the operations on those configurations. **MCL** (Möbius Collapse Logic) supplies the passage from an unresolved configuration to a definite outcome. In this mind, experience produces generator sequences, the processor projects them into phase–amplitude coordinates, memory composes them, and generation selects among the continuations that experience has made available.
+
+## The GUHCT book
+
+This repository also includes the full theory behind the HVP Mind: [`book/GUHCT_Full_Edition_6.pdf`](book/GUHCT_Full_Edition_6.pdf), *GUHCT: Complete Theory of Everything*, Full Edition 6 (Anthony Jordon, 25 May 2026, 848 pages). It covers Möbius Collapse Logic (MCL), LOQ-HCL, the Harmonic Computational Language (HCL), OEPST, THRFM, and Mars Theory with the Gear-LQT correspondence.
+
+The book, this repository and the HVP Mind are natively connected. The paper is the computational form of the book's theory, and the paper cites it directly. For example, the motivation for resonant structure is in Chapter 7, the interaction grammar is in Chapter 13, and the wave update quoted in Section 2 of the paper is the book's Eq. 11.64. The book is included here as context, so you can follow each of those references to its source.
+
+**Note on illustrations:** this edition of the book is included without the illustrations that appear throughout the full book. They were left out to keep the file light to download and transport, since the book serves here as context. The images shown in the book are publicly available, so they are easy to find by searching for them.
 
 ## Citation
 
