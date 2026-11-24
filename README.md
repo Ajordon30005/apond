@@ -9,7 +9,8 @@ One integer state transition, derived end to end, from the first fixed-point ope
 
 [![Paper](https://img.shields.io/badge/paper-PDF%20·%20152%20pages-b31b1b)](paper/HVP_Mind.pdf)
 [![Book](https://img.shields.io/badge/book-GUHCT%20Full%20Edition%206%20·%20848%20pages-6f42c1)](book/GUHCT_Full_Edition_6.pdf)
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
+[![Paper license: CC BY-NC 4.0](https://img.shields.io/badge/paper%20license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
+[![Book license: CC BY 4.0](https://img.shields.io/badge/book%20license-CC%20BY%204.0%20·%20free%20for%20all-brightgreen)](book/LICENSE)
 [![Commercial](https://img.shields.io/badge/commercial%20use-by%20permission-orange)](#license-and-commercial-use)
 [![Source](https://img.shields.io/badge/source-GUHCT%20%2F%20Marvosa-black)](https://github.com/Ajordon30005/marvosa)
 
@@ -105,6 +106,8 @@ The book, this repository and the HVP Mind are natively connected. The paper is 
 
 **Note on illustrations:** this edition of the book is included without the illustrations that appear throughout the full book. They were left out to keep the file light to download and transport, since the book serves here as context. The images shown in the book are publicly available, so they are easy to find by searching for them.
 
+**The book is free for everyone.** It is a theory of everything, made for everyone. You may use it for any purpose, including commercial purposes, as long as you credit Anthony Jordon. See [`book/LICENSE`](book/LICENSE) (CC BY 4.0).
+
 ## Citation
 
 If you use, discuss or build on this work, please cite it. GitHub's **"Cite this repository"** button reads [`CITATION.cff`](CITATION.cff).
@@ -118,11 +121,24 @@ If you use, discuss or build on this work, please cite it. GitHub's **"Cite this
   howpublished = {\url{https://github.com/Ajordon30005/apond}},
   note         = {Framework and theory: Anthony Jordon. Document preparation assisted by Manus AI.}
 }
+
+@book{jordon2026guhct,
+  title        = {GUHCT: Complete Theory of Everything},
+  author       = {Jordon, Anthony},
+  edition      = {Full Edition 6},
+  year         = {2026},
+  month        = may,
+  howpublished = {\url{https://github.com/Ajordon30005/apond}}
+}
 ```
 
 ## License and commercial use
 
-The paper and documentation are licensed under **[Creative Commons Attribution-NonCommercial 4.0](LICENSE)**, with these terms:
+This repository uses two licenses. Both require credit to Anthony Jordon.
+
+**The GUHCT book is free for everything.** It is licensed under **[Creative Commons Attribution 4.0](book/LICENSE)**. Anyone may read, share, adapt and build on it for any purpose, including commercial purposes, without asking. The only requirement is clear credit to **Anthony Jordon** as its author and the originator of GUHCT.
+
+**The HVP Mind paper and documentation** are licensed under **[Creative Commons Attribution-NonCommercial 4.0](LICENSE)**, with these terms:
 
 - **Credit is required.** Any sharing, quotation, adaptation or reimplementation must credit **Anthony Jordon** as the originator of the HVP Mind and its underlying theory.
 - **Non-commercial use is free.** That covers research, study, teaching, review and reproduction.
