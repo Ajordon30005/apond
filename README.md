@@ -77,9 +77,9 @@ You can trace any selected word back through its score, its live path, its proce
 
 The paper also derives where the architecture's efficiency comes from: learned suffix qualification, single-trajectory collapse, in-place reuse, exact cancellation branches and selective survival. It shows algebraically how experience reduces native work.
 
-## Reproduce it
+## Source and reproduction
 
-The executable source is the GUHCT / Marvosa repository. From that repository's root:
+The related GUHCT / Marvosa repository is available at the link below. Its current public conversation door is **not** the same `MindHVP` implementation described in this paper, so the following command does not reproduce the paper's witness:
 
 ```bash
 git clone https://github.com/Ajordon30005/marvosa
@@ -87,7 +87,7 @@ cd marvosa
 python3 -u hcl-ai/talk.py
 ```
 
-The door loads the existing `hcl-ai/mind-hvp.line` (there is no silent fresh start). Type one input, wait for the answer, then type the next. Section 9 of the paper describes correct operation, and Section 14 lists the SHA-256 fingerprints that bind each equation to the exact source it describes.
+The public door uses a different model and can update its saved state. Section 14 of the paper lists the source fingerprints for the version it describes, and Section 15 includes implementation listings. The witness starts from an already-running state: the compact saved line alone does not restore its complete live paths. A ready-to-run snapshot and pre-turn state fixture for replaying that particular witness are not currently provided here.
 
 ## Scope, stated plainly
 
