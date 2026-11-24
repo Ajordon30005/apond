@@ -106,7 +106,7 @@ If you use, discuss or build on this work, please cite it. GitHub's **"Cite this
   author       = {Jordon, Anthony},
   year         = {2026},
   month        = nov,
-  howpublished = {\url{https://github.com/Ajordon30005/hvp-mind}},
+  howpublished = {\url{https://github.com/Ajordon30005/apond}},
   note         = {Framework and theory: Anthony Jordon. Document preparation assisted by Manus AI.}
 }
 ```
