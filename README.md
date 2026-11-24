@@ -7,6 +7,7 @@
 **No neural weights. No attention layers. No backpropagation. No floating point.**<br>
 One integer state transition, derived end to end, from the first fixed-point operation to the last byte of the answer.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24514802.svg)](https://doi.org/10.5281/zenodo.24514802)
 [![Paper](https://img.shields.io/badge/paper-PDF%20·%20152%20pages-b31b1b)](paper/HVP_Mind.pdf)
 [![Book](https://img.shields.io/badge/book-GUHCT%20Full%20Edition%206%20·%20848%20pages-6f42c1)](book/GUHCT_Full_Edition_6.pdf)
 [![Paper license: CC BY-NC 4.0](https://img.shields.io/badge/paper%20license-CC%20BY--NC%204.0-lightgrey)](LICENSE)
@@ -119,6 +120,7 @@ If you use, discuss or build on this work, please cite it. GitHub's **"Cite this
   year         = {2026},
   month        = nov,
   howpublished = {\url{https://github.com/Ajordon30005/apond}},
+  doi          = {10.5281/zenodo.24514802},
   note         = {Framework and theory: Anthony Jordon. Document preparation assisted by Manus AI.}
 }
 
