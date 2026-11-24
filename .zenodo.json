@@ -1,0 +1,15 @@
+{
+  "title": "The HVP Mind: An Exact Derivation from Harmonic Arithmetic to a Native Conversational Answer",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>A conversational AI you can check by hand: no neural weights, no attention layers, no backpropagation, no floating point. This 152-page paper derives one complete turn of the native MindHVP as an exact integer state transition, from the HCL fixed-point operations to the last byte of the answer. The answer was calculated from the system's observed live state, then matched exactly by the unchanged running system.</p><p>The release also includes <em>GUHCT: Complete Theory of Everything</em>, Full Edition 6 (848 pages), the theory the paper is built on. The book is included without its illustrations to keep the file light; the images are publicly available.</p><p>Licensing: the paper is licensed under CC BY-NC 4.0 (credit to Anthony Jordon required; commercial use by permission, xpguhct@gmail.com). The GUHCT book is licensed under CC BY 4.0, free for every use including commercial use, with credit to Anthony Jordon. Executable source: https://github.com/Ajordon30005/marvosa</p>",
+  "creators": [
+    { "name": "Jordon, Anthony" }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "keywords": ["artificial intelligence", "language model", "integer arithmetic", "interpretability", "GUHCT", "HCL", "MCL", "HVP Mind"],
+  "related_identifiers": [
+    { "identifier": "https://github.com/Ajordon30005/marvosa", "relation": "isSupplementedBy", "scheme": "url" }
+  ]
+}
