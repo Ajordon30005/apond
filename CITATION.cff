@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use or build on this work, please cite it as below and credit Anthony Jordon. Commercial use requires permission: xpguhct@gmail.com"
+title: "The HVP Mind: An Exact Derivation from Harmonic Arithmetic to a Native Conversational Answer"
+type: report
+authors:
+  - family-names: Jordon
+    given-names: Anthony
+    email: xpguhct@gmail.com
+date-released: 2026-11-22
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/Ajordon30005/marvosa"
+url: "https://github.com/Ajordon30005/hvp-mind"
+keywords:
+  - artificial intelligence
+  - language model
+  - integer arithmetic
+  - interpretability
+  - GUHCT
+  - HCL
+  - MCL
