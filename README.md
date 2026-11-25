@@ -79,15 +79,15 @@ The paper also derives where the architecture's efficiency comes from: learned s
 
 ## Source and reproduction
 
-The related GUHCT / Marvosa repository is available at the link below. Its current public conversation door is **not** the same `MindHVP` implementation described in this paper, so the following command does not reproduce the paper's witness:
+Download the [experienced MindHVP ZIP](mindhvp-experienced-copy.zip) for the source tree, conversation entry point, and compact saved state. The seven source files listed in Section 14 of the paper match the fingerprints of the files in this archive.
 
 ```bash
-git clone https://github.com/Ajordon30005/marvosa
-cd marvosa
+unzip mindhvp-experienced-copy.zip
+cd mindhvp
 python3 -u hcl-ai/talk.py
 ```
 
-The public door uses a different model and can update its saved state. Section 14 of the paper lists the source fingerprints for the version it describes, and Section 15 includes implementation listings. The witness starts from an already-running state: the compact saved line alone does not restore its complete live paths. A ready-to-run snapshot and pre-turn state fixture for replaying that particular witness are not currently provided here.
+The included `hcl-ai/mind-hvp.line` matches the seven-integer **post-turn** save in the paper. Running the conversation can update that file, so keep a separate copy if you want to preserve the supplied state. The compact line carries the aggregate state rather than the complete live paths; Section 8.4 explains the distinction.
 
 ## Scope, stated plainly
 
@@ -146,4 +146,4 @@ This repository uses two licenses. Both require credit to Anthony Jordon.
 - **Non-commercial use is free.** That covers research, study, teaching, review and reproduction.
 - **Commercial use requires a written agreement.** If you want to use this work in a product, service, commercial R&D or paid offering, let's talk: **xpguhct@gmail.com**
 
-The Marvosa source code is distributed under its own license in its own repository.
+The experienced-copy archive includes its own `mindhvp/LICENSE` (GNU GPL v3); consult the archive for the source terms. The paper and book licenses above remain separate.
