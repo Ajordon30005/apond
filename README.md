@@ -38,18 +38,9 @@ The system is experimental. The implementation described in the paper uses fixed
 
 The finished answer is delivered from its ordered byte representation. Separately, a compact projection of the resulting field is saved to seed a later session. These are different representations with different jobs: the saved line is not a reconstruction of every live path.
 
-## Following one turn
+## From arithmetic to an answer
 
-To show how these pieces fit together, the paper works through a small turn from an already-running state. The system had previously encountered `less hauling, more lunch.` The paper starts with the input `hauling,` and follows the live paths available to that state:
-
-```
-input   hauling,
-output  hauling, more lunch.
-```
-
-The output includes the input prefix; the generated continuation is `more lunch.` The paper calculates the two continuations, why generation stops, nine output-address parameters, all 20 output bytes, and the seven-integer saved line. It reports that a subsequent run of the unchanged native system matched the calculated answer and saved line.
-
-The point of this small example is to follow the connection between the existing state, the answer, and the state left behind—not to judge conversational ability from a short response.
+The paper follows a complete conversational turn from an observed live state, showing how experience and the current field participate in each choice. Its worked derivation connects those choices to the finished output and the state saved afterward.
 
 ## What is in the paper
 
