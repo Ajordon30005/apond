@@ -2,10 +2,9 @@
 
 # The HVP Mind
 
-### A conversational AI you can check by hand.
+### An experimental language system connecting experience, memory, and decision.
 
-**No neural weights. No attention layers. No backpropagation. No floating point.**<br>
-One integer state transition, derived end to end, from the first fixed-point operation to the last byte of the answer.
+How does a mind's experience shape its next answer—and how can that process be followed from input to output?
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24514802.svg)](https://doi.org/10.5281/zenodo.24514802)
 [![Paper](https://img.shields.io/badge/paper-PDF%20·%20152%20pages-b31b1b)](paper/HVP_Mind.pdf)
@@ -21,35 +20,36 @@ One integer state transition, derived end to end, from the first fixed-point ope
 
 ---
 
-## The result in three lines
+## What the paper is about
 
-Before typing anything into the running system, the paper calculates its answer on paper, with exact integers, from the system's observed live state:
+*The HVP Mind* explores a way to bring learning, memory, and decision together in one language system. It is a computational expression of Anthony Jordon's GUHCT framework: experience leaves structure in a field, and that changing field participates in what the system does next.
+
+The paper's goal is to explain that process from the ground up. It defines the arithmetic and follows a complete conversational turn: how input becomes experience, how the current state helps select a continuation, how using that continuation changes the state, and how the answer and saved state are produced. The intention is to make those connections precise enough to follow and examine, rather than presenting an answer without explaining the process behind it.
+
+The system is experimental. The implementation described in the paper uses fixed-point integer arithmetic and does not use neural weights, attention layers, or backpropagation. The paper is about the architecture and the workings of a turn—not a claim that the model is a mature conversational system.
+
+## How the mind works
+
+**Experience creates paths.** As the system receives text, it creates or reinforces paths that connect a word context to a possible continuation. Each live path also has numerical phase and amplitude coordinates. Together, the live paths contribute to a composite memory field shaped by the system's experience.
+
+**The current state takes part in a decision.** To continue a response, the system looks for live paths that exactly match the end of the current context, starting with the most specific supported context. It uses the path coordinates and the current field to score the eligible continuations, then selects one deterministically.
+
+**A decision changes what comes next.** Using a path reinforces it and changes the field before the next continuation is selected. At the end of a turn, reinforced paths are protected, while other paths weaken and can eventually be removed. Experience therefore affects both which continuations are available and the state in which later choices are made.
+
+The finished answer is delivered from its ordered byte representation. Separately, a compact projection of the resulting field is saved to seed a later session. These are different representations with different jobs: the saved line is not a reconstruction of every live path.
+
+## Following one turn
+
+To show how these pieces fit together, the paper works through a small turn from an already-running state. The system had previously encountered `less hauling, more lunch.` The paper starts with the input `hauling,` and follows the live paths available to that state:
 
 ```
-you    hauling,
-ai     hauling, more lunch.
+input   hauling,
+output  hauling, more lunch.
 ```
 
-The paper predicts the two continuations (`more`, then `lunch.`), the moment generation stops, all nine output-address parameters, every one of the twenty output bytes, and the seven-integer line the mind saves afterward. The same input was then typed into the **unchanged** native `talk.py` process. Its answer and its saved state matched the calculation **exactly**.
+The output includes the input prefix; the generated continuation is `more lunch.` The paper calculates the two continuations, why generation stops, nine output-address parameters, all 20 output bytes, and the seven-integer saved line. It reports that a subsequent run of the unchanged native system matched the calculated answer and saved line.
 
-Nothing was edited, injected, or re-run to get there. Every number is in the paper.
-
-## Why this is different
-
-Today's language models are trained black boxes: billions of floating-point weights fitted by gradient descent, inspected after the fact with probes and heatmaps. Explaining *why* one produced a particular word is an open research problem.
-
-The HVP Mind is built the other way around. Every stage has a lower-level arithmetic meaning, and every stage is written down:
-
-| Conventional LLM | HVP Mind |
-|---|---|
-| Learned embedding matrices | Byte-labelled generator braids with an exact inverse |
-| Attention over a context window | One live harmonic field (`HVPField`) composed by phase–amplitude COMP |
-| Backpropagation through a dense network | Learning by experience: path creation, self-COMP reinforcement, decay and selective survival |
-| Softmax sampling | Deterministic MCL selection over an exact integer score vector |
-| `max_new_tokens` cap | A proven native stopping condition |
-| Checkpoint of opaque tensors | A compact seven-integer persistence line that re-seeds the next session exactly |
-
-You can trace any selected word back through its score, its live path, its processor spectrum and its generator data, without a hidden classifier anywhere in the chain.
+The point of this small example is to follow the connection between the existing state, the answer, and the state left behind—not to judge conversational ability from a short response.
 
 ## What is in the paper
 
@@ -75,9 +75,9 @@ You can trace any selected word back through its score, its live path, its proce
 | **Theorem 5** | The witness answer is fixed by the native field. |
 | **Theorem 6** | Composition of the native turn contracts: the whole turn (learn, generate, stop, deliver, save) holds together. |
 
-The paper also derives where the architecture's efficiency comes from: learned suffix qualification, single-trajectory collapse, in-place reuse, exact cancellation branches and selective survival. It shows algebraically how experience reduces native work.
+The paper also examines how learned paths, selection, reuse, and selective survival can reduce particular operation counts under stated conditions. These are analyses of the system's work, not claims of a measured speed advantage over other models.
 
-## Source and reproduction
+## Source and running the mind
 
 Download the [experienced MindHVP ZIP](mindhvp-experienced-copy.zip) for the source tree, conversation entry point, and compact saved state. The seven source files listed in Section 14 of the paper match the fingerprints of the files in this archive.
 
@@ -91,7 +91,7 @@ The included `hcl-ai/mind-hvp.line` matches the seven-integer **post-turn** save
 
 ## Scope, stated plainly
 
-This paper is a **source-exact derivation** of one connected system, not a benchmark claim. "Exact" means the exact integer result of the specified procedure, including its floors, branch order and finite series budgets. It does not mean a finite series equals an irrational function. The worked example is deliberately small so that every intermediate value fits on the page. The claim is not scale. The claim is that a working conversational turn can be fully specified, predicted and verified with nothing left hidden.
+This paper is a **source-exact derivation** of one connected system, not a benchmark claim. "Exact" means the exact integer result of the specified procedure, including its floors, branch order and finite series budgets. It does not mean a finite series equals an irrational function. The worked example makes the operations of one turn inspectable; as the system has different experiences, its state and subsequent behavior can also change.
 
 We welcome scrutiny. If a number in the ledger does not reproduce, open an issue with the section and line.
 
